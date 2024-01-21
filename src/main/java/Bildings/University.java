@@ -6,6 +6,6 @@ public class University extends Bilding{
 
     @Override
     public void display() {
-        System.out.println(name + adress + architectorName + culturePlace + yearOfBuild + whatStudy + numberOfStudents);
+        System.out.println(name + adress + architectorName + culturePlace + yearOfBuild + whatStudy + " " + numberOfStudents);
     }
 }
