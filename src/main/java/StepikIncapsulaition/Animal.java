@@ -138,6 +138,4 @@ public class Animal {
     public void holiday(double mass,int qty) {
         weight += mass * qty;
     }
-
-
 }

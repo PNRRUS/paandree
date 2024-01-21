@@ -1,8 +1,8 @@
 package lib;
 
-import stub.Simulator;
-import test.TestCase;
-import test.TestChain;
+//import stub.Simulator;
+//import test.TestCase;
+//import test.TestChain;
 
 public class Environment {
     /*I вариант:
@@ -25,9 +25,9 @@ public class Environment {
 //*/
     public static void main(String[] args) {
 
-        System.out.println(TestCase.startTestCase());
-        System.out.println(TestChain.startTestChain());
-        System.out.println(Simulator.startSimulator());
+//        System.out.println(TestCase.startTestCase());
+//        System.out.println(TestChain.startTestChain());
+//        System.out.println(Simulator.startSimulator());
 
         animal.Cat.sayHello();
         animal.Dog.sayHello();

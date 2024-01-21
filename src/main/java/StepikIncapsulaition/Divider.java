@@ -1,8 +1,8 @@
 package StepikIncapsulaition;
 
-public final
-class Divider extends WritingMaterials {
+public final class Divider extends WritingMaterials {
     String dividerType;
+
     boolean metal;
 
     {
