@@ -6,5 +6,6 @@ public abstract class Bilding {
     String architectorName;
     boolean culturePlace;
     int yearOfBuild;
-public abstract void  display();
+
+      public abstract void  display();
 }

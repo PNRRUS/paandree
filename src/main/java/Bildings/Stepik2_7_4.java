@@ -5,10 +5,20 @@ public class Stepik2_7_4 {
         Library pushinskaya = new Library();
         pushinskaya.isWarAndPeace = true;
         pushinskaya.numberOfBooks = 900;
+        pushinskaya.numberOfbooksAWeek = 20;
+        pushinskaya.weeksToEnd();
+        System.out.println(pushinskaya.toString());
         pushinskaya.display();
+
         University lomonosova = new University();
-        lomonosova.whatStudy = "Higher mathematics";
-        lomonosova.numberOfStudents = 2000;
+        lomonosova.setWhatStudy("Higher mathematics");
+        lomonosova.setNumberOfStudents(2000);
+        lomonosova.setNumberOfPersonInGroup(20);
+        lomonosova.setNumberOfStudyYears(5);
+        lomonosova.groupCourse();
+        System.out.println(lomonosova.toString());
         lomonosova.display();
+System.out.println(lomonosova.getNumberOfStudents());
+
     }
 }
