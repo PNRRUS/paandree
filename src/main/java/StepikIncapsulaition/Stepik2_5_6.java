@@ -6,7 +6,7 @@ public class Stepik2_5_6 {
   public static void main(String[] args) {
     Animal duck = new Animal("Утка", "Утя", 3, 5.8, true, true, true);
     duck.display();
-
+System.out.println(duck.toString());
 
     Bird owl = new Bird("Сова", "Филин", 25,25.3,true,true,false,"Россия",
     false);

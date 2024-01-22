@@ -13,5 +13,14 @@ int numberOfbooksAWeek;
                 "сколько книг забирают в неделю: " + numberOfbooksAWeek + "\n" +
                 "Сколько недель библиотека проживет: " +  numberOfBooks / numberOfbooksAWeek);
     }
+
+    @Override
+    public String toString() {
+        return "Library {" +
+                "numberOfBooks = " + numberOfBooks +
+                ", isWarAndPeace = " + isWarAndPeace +
+                ", numberOfbooksAWeek = " + numberOfbooksAWeek +
+                '}';
+    }
 }
 

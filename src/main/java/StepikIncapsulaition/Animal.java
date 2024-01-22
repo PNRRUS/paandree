@@ -138,4 +138,17 @@ public class Animal {
     public void holiday(double mass,int qty) {
         weight += mass * qty;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", isFly=" + isFly +
+                ", isWalk=" + isWalk +
+                ", isSwim=" + isSwim +
+                '}';
+    }
 }
