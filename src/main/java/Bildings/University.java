@@ -1,10 +1,20 @@
 package Bildings;
 
-public class University extends Bilding{
+public class University extends Bilding implements SocialHouse{
    private String whatStudy;
    private int numberOfStudents;
    private int numberOfPersonInGroup;
    private int numberOfStudyYears;
+   private boolean  fieldIsThereADormNearby;
+   private int numbersOfUniversity;
+
+    public boolean isFieldIsThereADormNearby() {
+        return fieldIsThereADormNearby;
+    }
+
+    public int getNumbersOfUniversity() {
+        return numbersOfUniversity;
+    }
 
     public String getWhatStudy() {
         return whatStudy;
@@ -38,6 +48,14 @@ public class University extends Bilding{
         this.numberOfStudyYears = numberOfStudyYears;
     }
 
+    public void setFieldIsThereADormNearby(boolean fieldIsThereADormNearby) {
+        this.fieldIsThereADormNearby = fieldIsThereADormNearby;
+    }
+
+    public void setNumbersOfUniversity(int numbersOfUniversaty) {
+        this.numbersOfUniversity = numbersOfUniversaty;
+    }
+
     @Override
     public void display() {
         System.out.println(name + adress + architectorName + culturePlace + yearOfBuild + whatStudy + " " + numberOfStudents);
@@ -59,7 +77,17 @@ public class University extends Bilding{
     }
 
     public void groupCourse(){
-        System.out.println("Груп на каждом курсе: " + numberOfPersonInGroup / numberOfStudyYears  + "\n"
+        System.out.println("Групп  на каждом курсе: " + numberOfPersonInGroup / numberOfStudyYears  + "\n"
                 + "Количество учеников на курсе: "  + numberOfStudents / numberOfStudyYears );
+    }
+
+    @Override
+    public void isThereADormNearby() {
+System.out.println("Есть ли общежитие поблизости: " + fieldIsThereADormNearby);
+    }
+
+    @Override
+    public void howManyUniversities() {
+        System.out.println("В этом городе есть " + numbersOfUniversity + " университет(-ов)");
     }
 }

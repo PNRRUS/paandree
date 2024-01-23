@@ -1,9 +1,10 @@
 package Bildings;
 
-public class Library extends Bilding{
+public class Library extends Bilding implements LivingHouse{
 int numberOfBooks;
 boolean isWarAndPeace;
 int numberOfbooksAWeek;
+int numberOfFamilyMembers;
     @Override
     public void display() {
        System.out.println(name + adress + architectorName + culturePlace + yearOfBuild + numberOfBooks + isWarAndPeace);
@@ -21,6 +22,16 @@ int numberOfbooksAWeek;
                 ", isWarAndPeace = " + isWarAndPeace +
                 ", numberOfbooksAWeek = " + numberOfbooksAWeek +
                 '}';
+    }
+
+    @Override
+    public void pumPUpPump() {
+        System.out.println("Я подкачал насос в библиотеке");
+    }
+
+    @Override
+    public void numberOfPersons() {
+        System.out.println("Семейных людей посещающих библиотеку: " + numberOfFamilyMembers);
     }
 }
 
