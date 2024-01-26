@@ -1,6 +1,7 @@
 package Figures;
 
 public class Square extends Figure{
+    int str;
     @Override
     public void move() {
         x = x + dx;
@@ -9,14 +10,17 @@ public class Square extends Figure{
 
     @Override
     public void S() {
-        System.out.println(x * y);
+        System.out.println(str * str);
     }
 
     @Override
     public String toString() {
-        return "Square{" +
-                "x=" + x +
+        return "kvadratic {" +
+                "str=" + str +
+                ", x=" + x +
                 ", y=" + y +
+                ", dx=" + dx +
+                ", dy=" + dy +
                 '}';
     }
 }

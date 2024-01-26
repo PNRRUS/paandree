@@ -1,8 +1,7 @@
 package Figures;
 
-public class Rectangle extends Figure{
-    int dlina;
-    int shirina;
+public class Circle extends Figure{
+    int r;
 
     @Override
     public void move() {
@@ -12,14 +11,14 @@ public class Rectangle extends Figure{
 
     @Override
     public void S() {
-System.out.println(dlina * shirina);
+        int a = (int)Math.PI * r * r;
+System.out.println(a);
     }
 
     @Override
     public String toString() {
-        return "primougolinic {" +
-                "dlina=" + dlina +
-                ", shirina=" + shirina +
+        return "krugoc {" +
+                "r=" + r +
                 ", x=" + x +
                 ", y=" + y +
                 ", dx=" + dx +
