@@ -19,13 +19,13 @@ public class Cube extends Quadrate{
     public void move(int dx, int dy) {
         x += dx;
         y += dy;
-        System.out.println("Cube moved: " + "dx= " + dx + " dy= " +dy);
+        System.out.println("Cube moved: " + "dx=" + dx + " dy=" +dy);
 
     }
 
     public void moveZ (int dz) {
         z += dz;
-        System.out.println("Cube moved: " + "dz= " + dz);
+        System.out.println("Cube moved: " + "dz=" + dz);
           }
 
     @Override
