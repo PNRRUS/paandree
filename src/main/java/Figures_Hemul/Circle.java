@@ -1,5 +1,7 @@
 package Figures_Hemul;
 
+import java.awt.*;
+
 public class Circle extends Figure{
 
     int radius;
@@ -20,6 +22,10 @@ public class Circle extends Figure{
         x += dx;
         y += dy;
         System.out.println("Circle moved: " + "dx=" + dx + " dy=" +dy);
+    }
+
+    public void drawCircle (Circle d, Graphics graphics) {
+        graphics.drawOval(d.x, d.y, d.radius, d.radius);
     }
 
     @Override

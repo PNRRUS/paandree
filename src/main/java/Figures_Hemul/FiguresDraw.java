@@ -9,17 +9,41 @@ public class FiguresDraw extends JComponent {
 //    Circle circleA;
 //
 //    public FiguresDraw(Circle circleA) {
-//        super();
 //        this.circleA = circleA;
+//
 //    }
 
     @Override
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
 
-          graphics.drawOval(10,  55, 8, 8);
+        Circle circleB = new Circle(110,120,25);
+        System.out.println(circleB.toString());
+        circleB.drawCircle(circleB, graphics);
+        circleB.square();
 
-       graphics.fill3DRect(140, 140, 10, 10, true);
+
+        circleB.move(45,25);
+        System.out.println(circleB.toString());
+
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+        circleB.drawCircle(circleB, graphics);
+
+
 
     }
+//        graphics.drawOval(circleB.x,  circleB.y, circleB.radius, circleB.radius);
+//    @Override
+//    public String toString() {
+//        return "FiguresDraw{" +
+//                "circleB=" + circleB +
+//                ", ui=" + ui +
+//                ", listenerList=" + listenerList +
+//                ", accessibleContext=" + accessibleContext +
+//                '}';
+//    }
 }
