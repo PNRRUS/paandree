@@ -1,0 +1,140 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "Lab9.Company",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_2360428 { 
+   	label=Lab9
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Company2360428[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Company</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   CompanySlogans: ArrayList&lt;String&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   EmployeeCars: HashMap&lt;String, String&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   EmployeeList: ArrayList&lt;Employee&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   Slogan: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   carBrand: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   carNumber: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   x: Employee [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addCar(carNumber: String, carBrand: String, CompanyCars: HashMap&lt;String, String&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addEmployee(x: Employee, EmployeeList: ArrayList&lt;Employee&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addSlogan(Slogan: String, CompanySlogans: ArrayList&lt;String&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ delEmployee(x: Employee, EmployeeList: ArrayList&lt;Employee&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ findCar(carNumber: String, CompanyCars: HashMap&lt;String, String&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ printEmployees(EmployeeList: ArrayList&lt;Employee&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ printSlogans(CompanySlogans: ArrayList&lt;String&gt;)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Employee2360428[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Employee</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   Name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   Salary: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   Surname: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Company2360428 -> Employee2360428[label="EmployeeList
+[0..*]"];
+Company2360428 -> Employee2360428[label="x
+[0..1]"];
+    
+}
+@enduml

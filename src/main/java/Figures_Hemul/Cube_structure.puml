@@ -1,0 +1,179 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "Figures_Hemul.Cube",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1497664311 { 
+   	label=Figures_Hemul
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Circle1497664311[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Circle</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   radius: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ drawCircle(d: Circle, graphics: Graphics)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ move(dx: int, dy: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ square()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Cube1497664311[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Cube</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   z: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ move(dx: int, dy: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ moveZ(dz: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ square()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Figure1497664311[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Figure</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   x: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   y: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ move(dx: int, dy: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ square()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Quadrate1497664311[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Quadrate</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   edge: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ move(dx: int, dy: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ square()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Rectangle1497664311[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Rectangle</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   sideA: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   sideB: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ move(dx: int, dy: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ square()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Figure1497664311 -> Circle1497664311[arrowhead=none, arrowtail=empty, dir=both];
+Figure1497664311 -> Quadrate1497664311[arrowhead=none, arrowtail=empty, dir=both];
+Figure1497664311 -> Rectangle1497664311[arrowhead=none, arrowtail=empty, dir=both];
+Quadrate1497664311 -> Cube1497664311[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
