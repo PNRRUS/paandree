@@ -25,7 +25,10 @@ public class Circle extends Figure{
     }
 
     public void drawCircle (Circle d, Graphics graphics) {
+
         graphics.drawOval(d.x, d.y, d.radius, d.radius);
+        graphics.drawOval(d.x + 1, d.y + 1, d.radius, d.radius);
+        graphics.drawOval(d.x - 1, d.y - 1, d.radius, d.radius);
     }
 
     @Override

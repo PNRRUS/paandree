@@ -3,7 +3,7 @@
 /' diagram meta data start
 config=CallConfiguration;
 {
-  "rootMethod": "Figures_Hemul.FiguresCreated#main(String[])",
+  "rootMethod": "Figures.Cub#S()",
   "projectClassification": {
     "searchMode": "OpenProject", // OpenProject, AllProjects
     "includedProjects": "",
@@ -71,7 +71,7 @@ config=CallConfiguration;
     "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
     "showDetailedClassStructure": false
   },
-  "rootClass": "Figures_Hemul.FiguresCreated",
+  "rootClass": "Figures.Cub",
   "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
 }
 diagram meta data end '/
@@ -84,33 +84,68 @@ digraph g {
     
 
 'nodes 
-subgraph cluster_1497664311 { 
-   	label=Figures_Hemul
+subgraph cluster_805530095 { 
+   	label=Figures
 	labeljust=l
 	fillcolor="#ececec"
 	style=filled
    
-   subgraph cluster_1824765552 { 
-   	label=FiguresCreated
+   subgraph cluster_1264897425 { 
+   	label=Cub
 	labeljust=l
 	fillcolor=white
 	style=filled
    
-   FiguresCreated1497664311XXXmain1859653459[
-	label="+ main()"
+   Cub805530095XXXS0[
+	label="+ S()"
 	style=filled
 	fillcolor=white
-	tooltip="FiguresCreated
+	tooltip="Cub
 
 null"
 	penwidth=4
 	fontcolor=darkgreen
 ];
 } 
+
+subgraph cluster_1408796701 { 
+   	label=Figure
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Figure805530095XXXS0[
+	label="+ S()"
+	style=filled
+	fillcolor=white
+	tooltip="Figure
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1524631241 { 
+   	label=FiguresMain
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FiguresMain805530095XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="FiguresMain
+
+null"
+	fontcolor=darkgreen
+];
+} 
 } 
 
 'edges    
-
+Figure805530095XXXS0 -> Cub805530095XXXS0;
+FiguresMain805530095XXXmain1859653459 -> Cub805530095XXXS0;
     
 }
 @enduml

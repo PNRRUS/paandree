@@ -2,7 +2,6 @@ package Figures_Hemul;
 
 import javax.swing.*;
 import java.awt.*;
-import Figures_Hemul.*;
 
 public class FiguresDraw extends JComponent {
 
@@ -27,6 +26,25 @@ public class FiguresDraw extends JComponent {
         System.out.println(circleB.toString());
         circleB.drawCircle(circleB, graphics);
 
+        Circle circleSabito = new Circle(100,89,56);
+        System.out.println(circleB.toString());
+        circleSabito.drawCircle(circleB, graphics);
+        circleSabito.square();
+
+
+        circleSabito.move(89,26);
+        System.out.println(circleSabito.toString());
+        circleSabito.drawCircle(circleSabito, graphics);
+
+        Circle circlePav2 = new Circle(700,102,89);
+        System.out.println(circleB.toString());
+        circlePav2.drawCircle(circleB, graphics);
+        circlePav2.square();
+
+
+        circlePav2.move(-100,63);
+        System.out.println(circlePav2.toString());
+        circlePav2.drawCircle(circlePav2, graphics);
 
 
     }
