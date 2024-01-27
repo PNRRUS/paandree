@@ -1,11 +1,38 @@
 package Figures_Hemul;
 
+import Guli_10_23.SeaBattleFieldUS10;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
+
+
 public class FiguresCreated {
 
     public static void main(String[] Args) {
 
+        JFrame field = new JFrame("Figures");
+
+
+        field.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //кнопка закрытия окна
+        field.setSize(999, 742); // размер окна
+        field.setLayout(new BorderLayout()); // менеджер компановки?
+        field.setLocationRelativeTo(null);
+        field.setAlwaysOnTop(true);
+        field.setResizable(false);
+        field.setVisible(true);
+
+
+        FiguresDraw game = new FiguresDraw();
+        field.add(game);
+
         System.out.println();
-        Circle circleA = new Circle(10,20,5);
+        Circle circleA = new Circle(20,20,5);
+
+//        FiguresDraw game = new FiguresDraw(circleA);
+//        field.add(game);
+
+
         System.out.println(circleA.toString());
         circleA.square();
         circleA.move(5,-5);
