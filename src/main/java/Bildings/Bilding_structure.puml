@@ -1,0 +1,158 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "Bildings.Bilding",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_947508592 { 
+   	label=Bildings
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Bilding947508592[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Bilding</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   adress: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   architectorName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   culturePlace: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   yearOfBuild: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ display()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Library947508592[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Library</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   isWarAndPeace: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   numberOfBooks: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   numberOfFamilyMembers: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   numberOfbooksAWeek: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ display()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ numberOfPersons()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ pumPUpPump()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ weeksToEnd()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+University947508592[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)University</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   fieldIsThereADormNearby: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfPersonInGroup: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfStudents: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfStudyYears: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numbersOfUniversity: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   whatStudy: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ display()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ groupCourse()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ howManyUniversities()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ isThereADormNearby()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Bilding947508592 -> Library947508592[arrowhead=none, arrowtail=empty, dir=both];
+Bilding947508592 -> University947508592[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
