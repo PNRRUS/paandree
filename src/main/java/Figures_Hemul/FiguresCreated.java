@@ -4,6 +4,8 @@ import Guli_10_23.SeaBattleFieldUS10;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Dimension;
+import java.awt.GridBagLayout;
 import java.io.IOException;
 
 
@@ -14,18 +16,45 @@ public class FiguresCreated {
         JFrame field = new JFrame("Figures");
 
 
-        field.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //кнопка закрытия окна
-        field.setSize(999, 742); // размер окна
-        field.setLayout(new BorderLayout()); // менеджер компановки?
-        field.setLocationRelativeTo(null);
-        field.setAlwaysOnTop(true);
+        field.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //кнопка закрытия окна
+        field.setSize(new Dimension(990,742)); // размер окна
+        //field.setLayout(new BorderLayout()); // менеджер компановки?
+        //field.getContentPane().setLayout((LayoutManager)null);
+        //field.setLocationRelativeTo(null);
+//        field.setAlwaysOnTop(true);
         field.setResizable(false);
-        field.setVisible(true);
+        //field.setLayout(new GridBagLayout());
+
+
+        JMenuBar menuBar = new JMenuBar();
+        menuBar.setBounds(0, 0, 990, 21);
+        field.getContentPane().add(menuBar);
+
+        JMenu mnGame = new JMenu("Game");
+        menuBar.add(mnGame);
+        JMenuItem mntmNewGame = new JMenuItem("New game");
+        mnGame.add(mntmNewGame);
+        JMenuItem mntmProperties = new JMenuItem("Properties");
+        mnGame.add(mntmProperties);
+        JMenuItem mntmExit = new JMenuItem("Exit");
+        mnGame.add(mntmExit);
+        JMenu mnHelp = new JMenu("Help");
+        menuBar.add(mnHelp);
+        JMenuItem mntmAbout = new JMenuItem("About");
+        mnHelp.add(mntmAbout);
+
+
+
+
 
         FiguresDraw figureGraphicsComponent = new FiguresDraw();
         field.add(figureGraphicsComponent);
 
-        System.out.println();
+        field.setVisible(true);
+
+
+
+  //      System.out.println();
 //        Circle circleA = new Circle(10,20,5);
 //        System.out.println(circleA.toString());
 //
