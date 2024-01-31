@@ -2,6 +2,15 @@ package Figures;
 
 public class Square extends Figure{
     int str;
+
+    public Square(int x, int y) {
+        super(x, y);
+    }
+
+    public Square() {
+        super();
+    }
+
     @Override
     public void move() {
         x = x + dx;

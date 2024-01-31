@@ -4,6 +4,13 @@ public class Rectangle extends Figure{
     int dlina;
     int shirina;
 
+    public Rectangle(int x, int y) {
+        super(x, y);
+    }
+
+    public Rectangle() {
+    }
+
     @Override
     public void move() {
         x = x + dx;

@@ -2,6 +2,14 @@ package Figures;
 
 public class Cub extends Figure {
 int dlinaRedra;
+
+    public Cub(int x, int y) {
+        super(x, y);
+    }
+
+    public Cub() {
+    }
+
     @Override
     public void move() {
         x = x + dx;
