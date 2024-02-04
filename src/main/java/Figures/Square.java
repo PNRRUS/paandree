@@ -1,5 +1,7 @@
 package Figures;
 
+import java.awt.*;
+
 public class Square extends Figure{
     int str;
 
@@ -7,10 +9,23 @@ public class Square extends Figure{
         super(x, y);
     }
 
+    public Square(int str) {
+        this.str = str;
+    }
+
+    public Square(int x, int y, int str) {
+        super(x, y);
+        this.str = str;
+    }
+
     public Square() {
         super();
     }
-
+    public void drawSquare(Square square, Graphics cOval) {
+        cOval.drawRect(x ,y ,str,str);
+        cOval.drawRect(x - 1,y -1,str,str);
+        cOval.drawRect(x + 1,y +1,str,str);
+    }
     @Override
     public void move() {
         x = x + dx;

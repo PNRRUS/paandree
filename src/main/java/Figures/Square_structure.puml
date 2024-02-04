@@ -70,7 +70,7 @@ config=StructureConfiguration;
     "showPackageLevels": 2,
     "showDetailedClassStructure": true
   },
-  "rootClass": "Figures.Circle",
+  "rootClass": "Figures.Square",
   "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
 }
 diagram meta data end '/
@@ -93,9 +93,10 @@ subgraph cluster_805530095 {
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)Circle</TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" >#   r: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   r: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawCircle(dOval: Circle, cOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
@@ -123,10 +124,25 @@ Figure805530095[
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)Figure</TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" >#   dx: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   dy: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   x: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   y: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   dx: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   dy: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   x: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   x1: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   y: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   y1: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ S()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ move()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Line805530095[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Line</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
@@ -145,6 +161,7 @@ Rectangle805530095[
 <TR><TD ALIGN="LEFT" >#   shirina: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ draw3DRect(rect1: Rectangle, cOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
@@ -160,6 +177,7 @@ Square805530095[
 <TR><TD ALIGN="LEFT" >#   str: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawSquare(square: Square, cOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
@@ -172,6 +190,7 @@ Square805530095[
 'edges    
 Figure805530095 -> Circle805530095[arrowhead=none, arrowtail=empty, dir=both];
 Figure805530095 -> Cub805530095[arrowhead=none, arrowtail=empty, dir=both];
+Figure805530095 -> Line805530095[arrowhead=none, arrowtail=empty, dir=both];
 Figure805530095 -> Rectangle805530095[arrowhead=none, arrowtail=empty, dir=both];
 Figure805530095 -> Square805530095[arrowhead=none, arrowtail=empty, dir=both];
     
