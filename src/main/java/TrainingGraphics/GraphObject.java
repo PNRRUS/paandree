@@ -1,6 +1,6 @@
 package TrainingGraphics;
 
-import Figures.*;
+import Figures.Circle;
 import Figures.Rectangle;
 
 import javax.swing.*;
@@ -22,31 +22,19 @@ public class GraphObject extends JComponent {
         int y2 = 0;
 
         super.paintComponent(oval);
-
+        Rectangle kOval = new Rectangle();
         oval.setColor(Color.MAGENTA);
 //        oval.drawLine(0, 1080, 1920, 0);
 //        oval.drawLine(1, 1080, 1920, 1);
-
-        Circle fOval = new Circle(45,87,100);
-        Circle gOval = new Circle(1800,800,100);
-        Circle pOval = new Circle(500,800,100);
-        Circle hOval = new Circle(786,100,100);
-        Rectangle rect1 = new Rectangle(200,100,100,200);
-        Rectangle rect2 = new Rectangle(580,20,600,200);
-        Square square1 = new Square(600,120,100);
-        Square square2 = new Square(1200,600,200);
-        Line Line1 = new Line(920,500,123,526);
-        Line Line2 = new Line(520,600,665,519);
-        Line Line3 = new Line(1920,0,0,1080);
-        rect1.draw3DRect(rect1,oval);
-        rect2.draw3DRect(rect2,oval);
-
-        square1.drawSquare(square1,oval);
-        square2.drawSquare(square2,oval);
-
-        Line1.drawLine(Line1,oval);
-        Line2.drawLine(Line2,oval);
-        Line3.drawLine(Line3,oval);
+       int x1 = (int) Math.round((Math.random() * 1920));
+        Circle fOval = new Circle((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
+                (int) (Math.random() * 500));
+        Circle gOval = new Circle((int) Math.round((Math.random() * 1920)),(int) Math.round((Math.random() * 1080)),
+                (int) Math.round((Math.random() * 500)));
+        Circle pOval = new Circle((int) Math.round((Math.random() * 1920)),(int) Math.round((Math.random() * 1080)),
+                (int) (Math.random() * 500));
+        Circle hOval = new Circle((int) Math.round((Math.random() * 1920)),(int) Math.round((Math.random() * 1080)),
+                (int) (Math.random() * 500));
 
         Circle emptyCircle = new Circle();
         emptyCircle.x = 45;
