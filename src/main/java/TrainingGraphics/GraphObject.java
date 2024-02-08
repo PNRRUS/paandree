@@ -27,7 +27,8 @@ public class GraphObject extends JComponent {
 //        oval.drawLine(0, 1080, 1920, 0);
 //        oval.drawLine(1, 1080, 1920, 1);
        int x1 = (int) Math.round((Math.random() * 1920));
-        Circle fOval = new Circle((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
+
+        Circle aOval = new Circle((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
                 (int) (Math.random() * 500));
         Circle gOval = new Circle((int) Math.round((Math.random() * 1920)),(int) Math.round((Math.random() * 1080)),
                 (int) Math.round((Math.random() * 500)));
@@ -40,12 +41,23 @@ public class GraphObject extends JComponent {
         emptyCircle.x = 45;
         emptyCircle.y = 260;
         emptyCircle.r = 45;
-        emptyCircle.drawCircle(emptyCircle,oval);
+        //emptyCircle.drawCircle(emptyCircle,oval);
 
-        fOval.drawCircle(fOval,oval);
-        pOval.drawCircle(pOval,oval);
-        gOval.drawCircle(gOval,oval);
-        hOval.drawCircle(hOval,oval);
+//        for(int j = 0;j <= 100;j++){
+//            if(j <= 50 ) {
+//                oval.setColor(Color.MAGENTA);
+//                fOval.drawCircle(new Circle((int) Math.round((Math.random() * 1920)), (int) Math.round((Math.random() * 1080)),
+//                        (int) Math.round((Math.random() * 500))), oval);
+//            }
+//            if(j > 50 ) {
+//                oval.setColor(Color.black);
+//                fOval.drawCircle(new Circle((int) Math.round((Math.random() * 1920)), (int) Math.round((Math.random() * 1080)),
+//                        (int) Math.round((Math.random() * 500))), oval);
+//            }
+//        }
+//        pOval.drawCircle(pOval,oval);
+//        gOval.drawCircle(gOval,oval);
+//        hOval.drawCircle(hOval,oval);
 
         oval.setColor(Color.LIGHT_GRAY);
 
@@ -62,7 +74,7 @@ public class GraphObject extends JComponent {
             y2 += 40;
             x2 += 40;
         }
-
+aOval.drawCircleExtends(aOval,oval);
 
 
 

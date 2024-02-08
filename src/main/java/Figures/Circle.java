@@ -30,7 +30,16 @@ System.out.println(a);
         cOval.drawOval(dOval.x + 1,dOval.y + 1 ,dOval.r,dOval.r);
         cOval.drawOval(dOval.x - 1,dOval.y - 1 ,dOval.r,dOval.r);
     }
+    public void drawCircleExtends(Circle circle, Graphics cOval) {
+        int j = (int) (Math.random() * 500);
 
+        for(int i = 0;i <= 500;i += 25) {
+            cOval.drawOval(x - i ,y - i,r + i * 2 ,r + i * 2);
+        }
+        for(int i = 0;i <= 500;i += 25) {
+            cOval.drawOval(x - i + 1 ,y - i + 1,r + i * 2 ,r + i * 2);
+        }
+    }
 
 
     @Override

@@ -21,7 +21,11 @@ public class Graphics3 extends JComponent {
         Square square2 = new Square((int) Math.round((Math.random() * 1920)),
                 (int) (Math.random() * 1080),(int) (Math.random() * 800));
 
-        square1.drawSquare(square1,oval);
-        square2.drawSquare(square2,oval);
+        //square1.drawSquare(square1,oval);
+
+
+        //square1.drawSquareExtends(square1,oval);
+        square2.drawSquareExtendsNoCity(square2,oval);
+
+        }
     }
-}
