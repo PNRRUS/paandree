@@ -16,25 +16,23 @@ import java.awt.*;
             Line line1;
             line1 = new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
                     (int) (Math.random() * 600),(int) (Math.random() * 1000));
-            Line line2 = new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
-                    (int) (Math.random() * 400),(int) (Math.random() * 120));
-            Line line3 = new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
-                    (int) (Math.random() * 1920),(int) (Math.random() * 1080));
+//            Line line2 = new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
+//                    (int) (Math.random() * 400),(int) (Math.random() * 120));
+//            Line line3 = new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
+//                    (int) (Math.random() * 1920),(int) (Math.random() * 1080));
 
 
-          line1.drawLine1(line1,ovalL);
-            line2.drawLine1(line2,ovalL);
-            line3.drawLine1(line3,ovalL);
+
             for(int j = 0;j <= 100;j++){
                 if(j <= 50 ) {
                     ovalL.setColor(Color.MAGENTA);
-                    line3.drawLine1(new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
-                            (int) (Math.random() * 1920),(int) (Math.random() * 1080)), ovalL);
+                    new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
+                            (int) (Math.random() * 600),(int) (Math.random() * 1000)).drawLine1(line1,ovalL);
                 }
                 if(j > 50 ) {
                     ovalL.setColor(Color.GREEN);
-                    line1.drawLine1(new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
-                            (int) (Math.random() * 600),(int) (Math.random() * 1000)), ovalL);
+                    new Line((int) Math.round((Math.random() * 1920)),(int) (Math.random() * 1080),
+                            (int) (Math.random() * 600),(int) (Math.random() * 1000)).drawLine1(line1,ovalL);
                 }
             }
 

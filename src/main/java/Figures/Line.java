@@ -12,6 +12,7 @@ public class Line extends Figure {
         this.y1 = y1;
     }
 
+
     public Line(int x, int y, int x1, int y1) {
         super(x, y);
         this.x1 = x1;

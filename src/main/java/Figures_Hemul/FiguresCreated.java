@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import java.io.IOException;
+//import org.openqa.selenium.WebDriver;
 
 
 public class FiguresCreated {
