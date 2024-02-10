@@ -1,5 +1,7 @@
 package TrainingGraphics;
 
+import Figures.Graphics4;
+
 import javax.swing.*;
 
 public class Frame {
@@ -29,6 +31,13 @@ public class Frame {
         okno.setResizable(true);
         okno.add(tryangle);
 
+        JFrame iliminator = new JFrame("interpreter");
+        iliminator.setSize(600, 1080);
+        iliminator.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        Graphics4 Oval = new Graphics4();
+        iliminator.setVisible(true);
+        iliminator.setResizable(true);
+        iliminator.add(Oval);
         //GraphicsMain app = new GraphicsMain();
     }
 }

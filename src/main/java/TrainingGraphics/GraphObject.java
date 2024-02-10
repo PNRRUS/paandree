@@ -41,23 +41,23 @@ public class GraphObject extends JComponent {
         emptyCircle.x = 45;
         emptyCircle.y = 260;
         emptyCircle.r = 45;
-        //emptyCircle.drawCircle(emptyCircle,oval);
+        emptyCircle.drawCircle(emptyCircle,oval);
 
-//        for(int j = 0;j <= 100;j++){
-//            if(j <= 50 ) {
-//                oval.setColor(Color.MAGENTA);
-//                fOval.drawCircle(new Circle((int) Math.round((Math.random() * 1920)), (int) Math.round((Math.random() * 1080)),
-//                        (int) Math.round((Math.random() * 500))), oval);
-//            }
-//            if(j > 50 ) {
-//                oval.setColor(Color.black);
-//                fOval.drawCircle(new Circle((int) Math.round((Math.random() * 1920)), (int) Math.round((Math.random() * 1080)),
-//                        (int) Math.round((Math.random() * 500))), oval);
-//            }
-//        }
-//        pOval.drawCircle(pOval,oval);
-//        gOval.drawCircle(gOval,oval);
-//        hOval.drawCircle(hOval,oval);
+        for(int j = 0;j <= 100;j++){
+                if(j <= 50 ) {
+                    oval.setColor(Color.MAGENTA);
+                    aOval.drawCircle(new Circle((int) Math.round((Math.random() * 1920)), (int) Math.round((Math.random() * 1080)),
+                            (int) Math.round((Math.random() * 500))), oval);
+                }
+            if(j > 50 ) {
+                oval.setColor(Color.black);
+                aOval.drawCircle(new Circle((int) Math.round((Math.random() * 1920)), (int) Math.round((Math.random() * 1080)),
+                        (int) Math.round((Math.random() * 500))), oval);
+            }
+        }
+        pOval.drawCircle(pOval,oval);
+        gOval.drawCircle(gOval,oval);
+        hOval.drawCircle(hOval,oval);
 
         oval.setColor(Color.LIGHT_GRAY);
 

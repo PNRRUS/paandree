@@ -97,6 +97,7 @@ subgraph cluster_805530095 {
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
 <TR><TD ALIGN="LEFT" >+ drawCircle(dOval: Circle, cOval: Graphics)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawCircleExtends(circle: Circle, cOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
@@ -127,9 +128,7 @@ Figure805530095[
 <TR><TD ALIGN="LEFT" >+   dx: int [1]</TD></TR>
 <TR><TD ALIGN="LEFT" >+   dy: int [1]</TD></TR>
 <TR><TD ALIGN="LEFT" >+   x: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >+   x1: int [1]</TD></TR>
 <TR><TD ALIGN="LEFT" >+   y: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >+   y1: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
@@ -144,7 +143,27 @@ Line805530095[
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)Line</TD></TR>
 <HR/>
+<TR><TD ALIGN="LEFT" >+   x1: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   y1: int [1]</TD></TR>
+<HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawLine(dLine: Line, cOval: Graphics)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ move()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Oval805530095[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Oval</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   r: int [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ S()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ graphObjectForOval(oval: Oval, drawOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
@@ -178,6 +197,8 @@ Square805530095[
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
 <TR><TD ALIGN="LEFT" >+ drawSquare(square: Square, cOval: Graphics)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawSquareExtends(square: Square, cOval: Graphics)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawSquareExtendsNoCity(square: Square, cOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
@@ -191,6 +212,7 @@ Square805530095[
 Figure805530095 -> Circle805530095[arrowhead=none, arrowtail=empty, dir=both];
 Figure805530095 -> Cub805530095[arrowhead=none, arrowtail=empty, dir=both];
 Figure805530095 -> Line805530095[arrowhead=none, arrowtail=empty, dir=both];
+Figure805530095 -> Oval805530095[arrowhead=none, arrowtail=empty, dir=both];
 Figure805530095 -> Rectangle805530095[arrowhead=none, arrowtail=empty, dir=both];
 Figure805530095 -> Square805530095[arrowhead=none, arrowtail=empty, dir=both];
     
