@@ -46,8 +46,8 @@ public class Graphics3 extends JComponent {
 
             square2.drawSquare(square2,ovalS2);
 
-//            square2.drawSquareExtendsNoCity(square2, ovalS2);
-//
+            square2.drawSquareExtendsNoCity(square2, ovalS2);
+
 
 
 

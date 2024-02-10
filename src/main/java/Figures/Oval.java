@@ -5,8 +5,6 @@ import java.awt.*;
 public class Oval extends Figure {
     public int r;
 
-    public Oval() {
-    }
 
     public Oval(int x, int y, int r) {
         super(x, y);
@@ -36,6 +34,12 @@ public class Oval extends Figure {
             drawOval.drawOval(x - i + 1 ,y - i + 1,r + i * 4 ,r + i * 2);
         }
     }
+    public void drawOval(Oval oval, Graphics drawOvalGraphics) {
+        int j = (int) (Math.random() * 500);
+        drawOvalGraphics.drawOval(x,y,(int) (Math.random() * 500),
+                (int) (Math.random() * 500));
+    }
+
 
 
     @Override
