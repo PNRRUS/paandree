@@ -38,6 +38,16 @@ public class Frame {
         iliminator.setVisible(true);
         iliminator.setResizable(true);
         iliminator.add(Oval);
+
+        JFrame casement = new JFrame("Interstellar");
+        casement.setSize(600, 1080);
+        casement.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        casement.setLocationRelativeTo(null);
+        casement.setVisible(true);
+        Graphics5 cat = new Graphics5();
+        casement.setVisible(true);
+        casement.setResizable(true);
+        casement.add(cat);
         //GraphicsMain app = new GraphicsMain();
     }
 }

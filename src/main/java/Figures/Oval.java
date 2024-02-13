@@ -35,9 +35,30 @@ public class Oval extends Figure {
         }
     }
     public void drawOval(Oval oval, Graphics drawOvalGraphics) {
+        int randomColor = (int) (Math.random() * 6);
+        switch (randomColor) {
+            case 1:
+                drawOvalGraphics.setColor(Color.GRAY);
+                break;
+            case 2:
+                drawOvalGraphics.setColor(Color.black);
+                break;
+            case 3:
+                drawOvalGraphics.setColor(Color.CYAN);
+                break;
+            case 4:
+                drawOvalGraphics.setColor(Color.yellow);
+                break;
+            case 5:
+                 drawOvalGraphics.setColor(Color.MAGENTA);
+                break;
+
+            default: System.out.println("вы запрашиваете несуществующий месяц 0_0");
+        }
         int j = (int) (Math.random() * 500);
-        drawOvalGraphics.drawOval(x,y,(int) (Math.random() * 500),
-                (int) (Math.random() * 500));
+        int g = (int) (Math.random() * 500);
+        drawOvalGraphics.drawOval(x,y,j,g);
+        drawOvalGraphics.fillOval(x,y,j,g);
     }
 
 

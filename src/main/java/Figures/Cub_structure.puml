@@ -70,7 +70,7 @@ config=StructureConfiguration;
     "showPackageLevels": 2,
     "showDetailedClassStructure": true
   },
-  "rootClass": "TrainingGraphics.Graphics2",
+  "rootClass": "Figures.Cub",
   "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
 }
 diagram meta data end '/
@@ -83,25 +83,6 @@ digraph g {
     
 
 'nodes 
-subgraph cluster_2037244325 { 
-   	label=TrainingGraphics
-	labeljust=l
-	fillcolor="#ececec"
-	style=filled
-   
-   Graphics22037244325[
-	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
-<TR><TD ALIGN="LEFT" >(C)Graphics2</TD></TR>
-<HR/>
-<TR><TD ALIGN="LEFT" ># paintComponent(ovalL: Graphics)</TD></TR>
-</TABLE>>
-	style=filled
-	margin=0
-	shape=plaintext
-	fillcolor="#FFFFFF"
-];
-} 
-
 subgraph cluster_805530095 { 
    	label=Figures
 	labeljust=l
@@ -132,6 +113,7 @@ Cub805530095[
 <TR><TD ALIGN="LEFT" >#   dlinaRedra: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawCube(Cubic: Cub, cOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled

@@ -6,6 +6,10 @@ public abstract class Figure {
     public int dx;
     public int dy;
 public abstract void move();
+
+//
+//public abstract void move(Circle circle, Graphics drawOval);
+
 public abstract void S();
 
 
