@@ -1,37 +1,43 @@
 package Bildings;
 
 public class Library extends Bilding implements LivingHouse{
-int numberOfBooks;
-boolean isWarAndPeace;
-int numberOfbooksAWeek;
-int numberOfFamilyMembers;
+public int numberOfBooks;
+public boolean isWarAndPeace;
+public int numberOfbooksAWeek;
+public int numberOfFamilyMembers;
     @Override
     public void display() {
        System.out.println(name + adress + architectorName + culturePlace + yearOfBuild + numberOfBooks + isWarAndPeace);
     }
-    public void weeksToEnd(){
-        System.out.println("количество книг: " + numberOfBooks + "\n" +
-                "сколько книг забирают в неделю: " + numberOfbooksAWeek + "\n" +
-                "Сколько недель библиотека проживет: " +  numberOfBooks / numberOfbooksAWeek);
+    public String weeksToEnd(){
+        String s = "количество книг: " + numberOfBooks + "\n" +
+                " сколько книг забирают в неделю: " + numberOfbooksAWeek + "\n" +
+                " cколько недель библиотека проживет: " +  numberOfBooks / numberOfbooksAWeek;
+        System.out.println(s);
+        return s;
     }
 
     @Override
     public String toString() {
         return "Library {" +
-                "numberOfBooks = " + numberOfBooks +
-                ", isWarAndPeace = " + isWarAndPeace +
+                "numberOfBooks = " + numberOfBooks + "\n" +
+                ", isWarAndPeace = " + isWarAndPeace + "\n" +
                 ", numberOfbooksAWeek = " + numberOfbooksAWeek +
                 '}';
     }
 
     @Override
-    public void pumPUpPump() {
-        System.out.println("Я подкачал насос в библиотеке");
+    public String pumPUpPump() {
+        String g = "Я подкачал насос в библиотеке";
+        System.out.println(g);
+        return g;
     }
 
     @Override
-    public void numberOfPersons() {
-        System.out.println("Семейных людей посещающих библиотеку: " + numberOfFamilyMembers);
+    public String numberOfPersons() {
+        String s = "Семейных людей посещающих библиотеку: " + numberOfFamilyMembers;
+        System.out.println(s);
+        return  s;
     }
 }
 

@@ -44,7 +44,8 @@ int dlinaRedra;
         cCub.drawLine(x + a,y,(int) (x + (a * 0.75) + a),(int) (y + (a * 0.75)));
         cCub.drawLine(x,y + a,(int) (x + (a * 0.75)),(int) (y + (a * 0.75) + a));
         cCub.drawLine(x + a,y + a,(int) (x + (a * 0.75) + a),(int) (y + (a * 0.75) + a));
-
+        String r = "Romasha";
+        cCub.drawString(r, x, y);
         }
     @Override
     public void S() {

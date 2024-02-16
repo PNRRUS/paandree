@@ -1,7 +1,7 @@
 package Bildings;
 
 public interface LivingHouse {
-    public void pumPUpPump();
-    public  void numberOfPersons();
+    public String pumPUpPump();
+    public  String numberOfPersons();
 
 }

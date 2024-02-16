@@ -1,6 +1,9 @@
 package TrainingGraphics;
 
+import Bildings.Library;
+import Bildings.University;
 import Figures.Graphics4;
+
 
 import javax.swing.*;
 
@@ -48,6 +51,52 @@ public class Frame {
         casement.setVisible(true);
         casement.setResizable(true);
         casement.add(cat);
+
+        System.out.println("БИБЛИОТЕКА" + "\n");
+        Library pushinskaya = new Library();
+        pushinskaya.isWarAndPeace = true;
+        pushinskaya.numberOfBooks = 900;
+        pushinskaya.numberOfbooksAWeek = 20;
+        pushinskaya.numberOfFamilyMembers = 15;
+        pushinskaya.weeksToEnd();
+        System.out.println(pushinskaya.toString());
+        pushinskaya.pumPUpPump();
+        pushinskaya.numberOfPersons();
+        System.out.println("\n");
+
+        System.out.println("УНИВЕРСИТЕТ" + "\n");
+        University lomonosova = new University();
+        lomonosova.setFieldIsThereADormNearby(true);
+        lomonosova.setNumbersOfUniversity(2);
+        lomonosova.setWhatStudy("Higher mathematics");
+        lomonosova.setNumberOfStudents(2000);
+        lomonosova.setNumberOfPersonInGroup(20);
+        lomonosova.setNumberOfStudyYears(5);
+        lomonosova.groupCourse();
+        lomonosova.howManyUniversities();
+        lomonosova.isThereADormNearby();
+        System.out.println(lomonosova.toString());
+        System.out.println(lomonosova.getNumberOfStudents());
+
+        JFrame window = new JFrame("университет");
+        window.setSize(600, 1080);
+        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        window.setLocationRelativeTo(null);
+        window.setVisible(true);
+        GraphicsUniversity bea = new GraphicsUniversity();
+        window.setVisible(true);
+        window.setResizable(true);
+        window.add(bea);
+
+        JFrame IDoNotKnowWhatToCallIt = new JFrame("библиотека");
+        IDoNotKnowWhatToCallIt.setSize(1200, 1080);
+        IDoNotKnowWhatToCallIt.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        IDoNotKnowWhatToCallIt.setLocationRelativeTo(null);
+        IDoNotKnowWhatToCallIt.setVisible(true);
+        GraphicsLibrary dor = new GraphicsLibrary();
+        IDoNotKnowWhatToCallIt.setVisible(true);
+        IDoNotKnowWhatToCallIt.setResizable(false);
+        IDoNotKnowWhatToCallIt.add(dor);
         //GraphicsMain app = new GraphicsMain();
     }
 }
