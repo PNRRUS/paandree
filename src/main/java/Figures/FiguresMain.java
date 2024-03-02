@@ -64,5 +64,22 @@ public class FiguresMain {
         kvadratic.dy = 1;
         kvadratic.move();
         System.out.println(kvadratic.toString());
+
+       //Proverka proverka = new Proverka();
+       // System.out.println(proverka.toString());
+    }
+
+    public class Proverka {
+        public Proverka() {
+        }
+
+        @Override
+        public String toString() {
+            return "Proverka{}";
+        }
+    }
+    public class Proverka1 extends Proverka {
+        public Proverka1() {
+        }
     }
 }
