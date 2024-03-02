@@ -1,6 +1,6 @@
 package Bildings;
 
 public interface SocialHouse {
-    public void isThereADormNearby();
-    public void howManyUniversities();
+    public String isThereADormNearby();
+    public String howManyUniversities();
 }

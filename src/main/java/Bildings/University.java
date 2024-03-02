@@ -64,30 +64,36 @@ public class University extends Bilding implements SocialHouse{
     @Override
     public String toString() {
         return "University{" +
-                "whatStudy='" + whatStudy + '\'' +
-                ", numberOfStudents=" + numberOfStudents +
-                ", numberOfPersonInGroup=" + numberOfPersonInGroup +
-                ", numberOfStudyYears=" + numberOfStudyYears +
-                ", name='" + name + '\'' +
-                ", adress='" + adress + '\'' +
-                ", architectorName='" + architectorName + '\'' +
-                ", culturePlace=" + culturePlace +
+                "whatStudy ='" + whatStudy + '\'' +
+                ", numberOfStudents =" + numberOfStudents +
+                ", numberOfPersonInGroup =" + numberOfPersonInGroup +
+                ", numberOfStudyYears =" + numberOfStudyYears +
+                ", name ='" + name + '\'' +
+                ", adress ='" + adress + '\'' +
+                ", architectorName ='" + architectorName + '\'' +
+                ", culturePlace =" + culturePlace +
                 ", yearOfBuild=" + yearOfBuild +
                 '}';
     }
 
-    public void groupCourse(){
-        System.out.println("Групп  на каждом курсе: " + numberOfPersonInGroup / numberOfStudyYears  + "\n"
-                + "Количество учеников на курсе: "  + numberOfStudents / numberOfStudyYears );
+    public String groupCourse(){
+        String g = "Групп  на каждом курсе: " + numberOfPersonInGroup / numberOfStudyYears  + "\n"
+                + " Количество учеников на курсе: "  + numberOfStudents / numberOfStudyYears;
+        System.out.println(g);
+       return g;
     }
 
     @Override
-    public void isThereADormNearby() {
-System.out.println("Есть ли общежитие поблизости: " + fieldIsThereADormNearby);
+    public String isThereADormNearby() {
+        String g = "Есть ли общежитие поблизости: " + fieldIsThereADormNearby;
+        System.out.println(g);
+        return g;
     }
 
     @Override
-    public void howManyUniversities() {
-        System.out.println("В этом городе есть " + numbersOfUniversity + " университет(-ов)");
+    public String howManyUniversities() {
+        String g2 = "В этом городе есть " + numbersOfUniversity + " университет(-ов)";
+        System.out.println(g2);
+        return g2;
     }
 }

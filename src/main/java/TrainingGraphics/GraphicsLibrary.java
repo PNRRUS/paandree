@@ -37,8 +37,7 @@ public class GraphicsLibrary extends JComponent {
         Graphics2D g2 = (Graphics2D) art;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setFont(new Font("Arial", Font.ITALIC, 20));
-        String r = pushinskaya.toString();
-                art.drawString(r, 20,950);
+                art.drawString(pushinskaya.toString(), 20,950);
                 art.drawString(pushinskaya.weeksToEnd(), 20,1000);
         art.drawString( pushinskaya.pumPUpPump(), 20,900);
         art.drawString(pushinskaya.numberOfPersons(), 20,850);

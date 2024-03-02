@@ -79,13 +79,13 @@ public class Frame {
         System.out.println(lomonosova.getNumberOfStudents());
 
         JFrame window = new JFrame("университет");
-        window.setSize(600, 1080);
+        window.setSize(1500, 1080);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setLocationRelativeTo(null);
         window.setVisible(true);
         GraphicsUniversity bea = new GraphicsUniversity();
         window.setVisible(true);
-        window.setResizable(true);
+        window.setResizable(false);
         window.add(bea);
 
         JFrame IDoNotKnowWhatToCallIt = new JFrame("библиотека");
