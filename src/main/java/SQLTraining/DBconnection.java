@@ -3,7 +3,7 @@ package SQLTraining;
 import java.sql.*;
 
 public class DBconnection {
-
+//kjyukjhgjkgkjhgjhgkjhghj
 
         public static void main(String[] Args) throws SQLException {
             Connection connection = DriverManager.getConnection(
