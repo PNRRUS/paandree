@@ -147,7 +147,7 @@ Line805530095[
 <TR><TD ALIGN="LEFT" >+   y1: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ drawLine(dLine: Line, cOval: Graphics)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawLine1(dLine: Line, cOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
@@ -163,7 +163,7 @@ Oval805530095[
 <TR><TD ALIGN="LEFT" >+   r: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ S()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ graphObjectForOval(oval: Oval, drawOval: Graphics)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ drawOvalExtends(oval: Oval, drawOval: Graphics)</TD></TR>
 <TR><TD ALIGN="LEFT" >+ move()</TD></TR>
 </TABLE>>
 	style=filled
