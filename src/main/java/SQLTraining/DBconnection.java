@@ -3,7 +3,7 @@ package SQLTraining;
 import java.sql.*;
 
 public class DBconnection {
-//kjyukjhgjkgkjhgjhgkjhghj
+
 
         public static void main(String[] Args) throws SQLException {
             Connection connection = DriverManager.getConnection(
@@ -13,7 +13,7 @@ public class DBconnection {
             ResultSet results = statement.executeQuery(
                         "SELECT Name, Region, Population " +
                             "FROM country " +
-                            "WHERE Region = 'North America' " +
+                            "WHERE Region = 'Western Europe' " +
                             "ORDER BY Population ASC");
 
             while (results.next()) {
