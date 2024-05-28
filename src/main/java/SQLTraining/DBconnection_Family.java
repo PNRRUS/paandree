@@ -16,7 +16,16 @@ public class DBconnection_Family {
 
 
 
-
+            ResultSetMetaData metaData = results.getMetaData();
+            int columnCount = metaData.getColumnCount();
+            System.out.println(columnCount);
+            for (int column = 1; column <= columnCount; column++)
+            {
+                String name = metaData.getColumnName(column);
+               // String typeName = metaData.getColumnTypeName(column);
+                System.out.print(name  + '\t');// + typeName //+ '\n'
+            }
+            System.out.println();
             while (results.next()) {
 //                Integer id = results.getInt(1);
                 String one = results.getString(1);
