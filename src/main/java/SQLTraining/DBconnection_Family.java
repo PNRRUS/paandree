@@ -14,20 +14,27 @@ public class DBconnection_Family {
                             "body LEFT OUTER JOIN family_member  ON family_member_id = body_id " +
                             "LEFT OUTER JOIN characteristics ON family_member_id = family_members ");
 
-
+            System.out.println();
 
             ResultSetMetaData metaData = results.getMetaData();
             int columnCount = metaData.getColumnCount();
-            System.out.println(columnCount);
+            //System.out.println(columnCount);
+
+
             for (int column = 1; column <= columnCount; column++)
             {
                 String name = metaData.getColumnName(column);
                // String typeName = metaData.getColumnTypeName(column);
-                System.out.print(name  + '\t');// + typeName //+ '\n'
+                System.out.printf("%-21s",name);// + typeName //+ '\n'
+            }
+            System.out.println();
+
+            for (int column = 1; column < 16 * 21; column++){
+                System.out.print("-");
             }
             System.out.println();
             while (results.next()) {
-//                Integer id = results.getInt(1);
+
                 String one = results.getString(1);
                 String two = results.getString(2);
                 int three = results.getInt(3);
@@ -44,27 +51,15 @@ public class DBconnection_Family {
                 String fourteen = results.getString(14);
                 String fifteen = results.getString(15);
                 String sixteen = results.getString(16);
-                System.out.println(results.getRow() + ". "
-                        + "\t" + one
-                        + "\t" + two
-                        + "\t" + three
-                        + "\t" + four
-                        + "\t" + five
-                        + "\t" + six
-                        + "\t" + seven
-                        + "\t" + eight
-                        + "\t" + "\t" + nine
-                        + "\t" + "\t" + ten
-                        + "\t" + eleven
-                        + "\t" + twelve
-                        + "\t" + thirteen
-                        + "\t" + fourteen
-                        + "\t" + fifteen
-                        + "\t" + sixteen
-                );
+                System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s",
+                 one,two,three,four,five,six,seven,eight,nine,ten,eleven,
+                 twelve,thirteen,fourteen,fifteen,sixteen);
+                System.out.println();
             }
 
-
+            for (int i = 1; i < 16 * 21; i++){
+                System.out.print("-");
+            }
         }
     }
 
