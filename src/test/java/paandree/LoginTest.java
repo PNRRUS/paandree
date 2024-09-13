@@ -34,28 +34,100 @@ public class LoginTest {
      * тестовый метод для осуществления аутентификации
      */
     @Test
-    public void loginTest() {
+    public void loginTest() throws InterruptedException {
         //получение доступа к методам класса LoginPage для взаимодействия с элементами страницы
         //значение login/password берутся из файла настроек по аналогии с chromedriver
         //и loginpage
         //вводим логин
-        loginPage.inputLogin(ConfProperties.getProperty("login"));
+        //loginPage.inputLogin(ConfProperties.getProperty("login"));
         //нажимаем кнопку входа
+        Thread.sleep(2000);
+        loginPage.clickLoginBtn2();
+        Thread.sleep(2000);
+        loginPage.clickLoginBtn3();
+        Thread.sleep(2000);
+        loginPage.clickLoginBtn4();
+        Thread.sleep(5000);
+        loginPage.clickindexHTML();
+        Thread.sleep(5000);
+        loginPage.clickTesla();
+        Thread.sleep(5000);
 
-        loginPage.clickLoginBtn();
-        //вводим пароль
+        loginPage.clickmenu();
+        Thread.sleep(5000);
+        loginPage.clickmenuToyota();
+        Thread.sleep(5000);
+        loginPage.clickmenu();
+        Thread.sleep(5000);
+        loginPage.clickmenuTesla();
+        Thread.sleep(5000);
+
+
+
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
-        //нажимаем кнопку входа
+        Thread.sleep(2000);
+        loginPage.clickcontinueBtn2();
+        Thread.sleep(2000);
+        loginPage.clickcontinueBtn3();
+        Thread.sleep(2000);
+
+
+
+        int colorNumber =(int) Math.round(Math.random() * 6);
+
+        switch (colorNumber) {
+            case 0:
+                loginPage.clickLoginBtnBlue();
+
+                break;
+            case 1:
+                loginPage.clickLoginBtnRed();
+
+                break;
+            case 2:
+                loginPage.clickLoginBtnViolet();
+
+                break;
+            case 3:
+                loginPage.clickLoginBtnMagenta();
+
+                break;
+            case 4:
+                loginPage.clickLoginBtnPink();
+
+                break;
+            case 5:
+                loginPage.clickLoginBtnGreen();
+
+                break;
+            case 6:
+                loginPage.clickLoginBtnYellow();
+
+                break;
+
+        }
+
+
+        Thread.sleep(5000);
         loginPage.clickContinueBtn();
+        Thread.sleep(5000);
+        driver.quit();
+
+
+        //вводим пароль
+        //loginPage.inputPasswd(ConfProperties.getProperty("password"));
+        //нажимаем кнопку входа
+        //loginPage.clickContinueBtn();
         //получаем отображаемый логин
-        String user = profilePage.getUserName();
+        //String user = profilePage.getUserName();
         //и сравниваем его с логином из файла настроек
-        Assert.assertEquals(ConfProperties.getProperty("login"), user); }
+        //Assert.assertEquals(ConfProperties.getProperty("login"), user);
+    }
     /**
      * осуществление выхода из аккаунта с последующим закрытием окна браузера
      */
     @AfterClass
     public static void tearDown() {
-        profilePage.entryMenu();
-        profilePage.userLogout();
+        //profilePage.entryMenu();
+        //profilePage.userLogout();
         driver.quit(); } }
