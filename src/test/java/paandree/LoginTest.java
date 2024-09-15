@@ -7,6 +7,13 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+
+
+
 public class LoginTest {
     public static LoginPage loginPage;
     public static ProfilePage profilePage;
@@ -53,11 +60,19 @@ public class LoginTest {
         loginPage.clickTesla();
         Thread.sleep(5000);
 
-        loginPage.clickmenu();
+
+        Actions actionToyota = new Actions(driver);
+        WebElement catalog = driver.findElement(By.xpath("/html/body/nav/ul/div[1]/div[1]/li/a"));
+        actionToyota.moveToElement(catalog).build().perform();
+
         Thread.sleep(5000);
         loginPage.clickmenuToyota();
         Thread.sleep(5000);
-        loginPage.clickmenu();
+
+        Actions action = new Actions(driver);
+        WebElement we = driver.findElement(By.xpath("/html/body/nav/ul/div[1]/div[1]/li/a"));
+        action.moveToElement(we).build().perform();
+
         Thread.sleep(5000);
         loginPage.clickmenuTesla();
         Thread.sleep(5000);

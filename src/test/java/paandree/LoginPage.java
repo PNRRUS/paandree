@@ -91,7 +91,7 @@ public class LoginPage {
     @FindBy(xpath = "/html/body/nav/ul/div[1]/div/a[5]")
     private WebElement menuToyota;
 
-    @FindBy(xpath = "/html/body/nav/ul/div[1]/button")
+    @FindBy(xpath = "/html/body/nav/ul/div[1]/div[1]/li/a")
     private WebElement menu;
 
     @FindBy(xpath = "/html/body/nav/ul/div[1]/div/a[1]")
