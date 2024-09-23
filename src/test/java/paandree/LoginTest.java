@@ -75,9 +75,14 @@ public class LoginTest {
 
         Thread.sleep(5000);
         loginPage.clickmenuTesla();
+
+
+        Actions home = new Actions(driver);
+        WebElement menuHome = driver.findElement(By.xpath("/html/body/nav/ul/div[2]/li/a"));
+        action.moveToElement(we).build().perform();
+
+        loginPage.clickMenuHome();
         Thread.sleep(5000);
-
-
 
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
         Thread.sleep(2000);

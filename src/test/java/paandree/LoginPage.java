@@ -88,6 +88,7 @@ public class LoginPage {
     public void inputLogin(String login) {
         loginField.sendKeys(login); }
 
+
     @FindBy(xpath = "/html/body/nav/ul/div[1]/div/a[5]")
     private WebElement menuToyota;
 
@@ -99,6 +100,8 @@ public class LoginPage {
     /**
      * метод для ввода пароля
      */
+    @FindBy(xpath = "/html/body/nav/ul/div[2]/li/a")
+    private WebElement menuHome;
 
     public void inputPasswd(String passwd) {
         price.sendKeys(passwd); }
@@ -127,6 +130,8 @@ public class LoginPage {
         newCar.click(); }
     public void clickcontinueBtn3() {
         by.click();}
+    public void clickMenuHome() {
+        menuHome.click(); }
 
     public void clickmenu() {
         menu.sendKeys("Toyota");
@@ -167,4 +172,5 @@ public class LoginPage {
     public void clickLoginBtnYellow() {
         yellowColor.click();
     }
+
     }
