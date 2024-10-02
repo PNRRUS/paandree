@@ -15,7 +15,7 @@ public class Stepik2_7_4 {
         System.out.println("\n");
 
         System.out.println("УНИВЕРСИТЕТ" + "\n");
-        University lomonosova = new University();
+        University lomonosova =     new University();
         lomonosova.setFieldIsThereADormNearby(true);
         lomonosova.setNumbersOfUniversity(2);
         lomonosova.setWhatStudy("Higher mathematics");
@@ -27,5 +27,11 @@ public class Stepik2_7_4 {
         lomonosova.isThereADormNearby();
         System.out.println(lomonosova.toString());
 System.out.println(lomonosova.getNumberOfStudents());
+
+University itmo = new University("programming",  2000,
+        15, 6, true,2);
+        System.out.println(itmo.toString());
+
+
     }
 }
