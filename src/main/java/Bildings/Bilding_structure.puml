@@ -111,15 +111,35 @@ Library947508592[
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)Library</TD></TR>
 <HR/>
-<TR><TD ALIGN="LEFT" >#   isWarAndPeace: boolean [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   numberOfBooks: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   numberOfFamilyMembers: int [1]</TD></TR>
-<TR><TD ALIGN="LEFT" >#   numberOfbooksAWeek: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   isWarAndPeace: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   numberOfBooks: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   numberOfFamilyMembers: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   numberOfbooksAWeek: int [1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ display()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ numberOfPersons()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ pumPUpPump()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ weeksToEnd()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ numberOfPersons(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ pumPUpPump(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ weeksToEnd(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Museum947508592[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Museum</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   fieldIsThereADormNearby: boolean [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfPersonInGroup: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfStudents: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfStudyYears: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numbersOfUniversity: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   whatStudy: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ display()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ howManyUniversities(): String</TD></TR>
 </TABLE>>
 	style=filled
 	margin=0
@@ -139,9 +159,8 @@ University947508592[
 <TR><TD ALIGN="LEFT" >-   whatStudy: String [0..1]</TD></TR>
 <HR/>
 <TR><TD ALIGN="LEFT" >+ display()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ groupCourse()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ howManyUniversities()</TD></TR>
-<TR><TD ALIGN="LEFT" >+ isThereADormNearby()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ groupCourse(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ howManyUniversities(): String</TD></TR>
 </TABLE>>
 	style=filled
 	margin=0
@@ -152,7 +171,9 @@ University947508592[
 
 'edges    
 Bilding947508592 -> Library947508592[arrowhead=none, arrowtail=empty, dir=both];
+Bilding947508592 -> Museum947508592[arrowhead=none, arrowtail=empty, dir=both];
 Bilding947508592 -> University947508592[arrowhead=none, arrowtail=empty, dir=both];
+Museum947508592 -> University947508592[arrowhead=none];
     
 }
 @enduml

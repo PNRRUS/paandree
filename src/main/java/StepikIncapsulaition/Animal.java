@@ -14,6 +14,8 @@ package StepikIncapsulaition;
 //        rename(String) - принимает новое имя животного
 //        holiday(int) - принимает на вход число праздничных дней. Увеличивает массу животного на 0.1 за каждый праздничный день.
 
+
+
 public class Animal {
     static int counter = 0;
     static final String description = "класс основной(прародитель) описывает животных (например: рыб, птиц, насекомых с " +

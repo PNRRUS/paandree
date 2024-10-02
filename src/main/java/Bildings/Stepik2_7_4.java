@@ -31,6 +31,9 @@ System.out.println(lomonosova.getNumberOfStudents());
 University itmo = new University("programming",  2000,
         15, 6, true,2);
         System.out.println(itmo.toString());
+        lomonosova.display();
+        Museum hermitage = new Museum("programming",  2000,
+                15, 6, true,2);
 
 
     }

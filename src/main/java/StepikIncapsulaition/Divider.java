@@ -1,5 +1,10 @@
 package StepikIncapsulaition;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public final class Divider extends WritingMaterials {
     String dividerType;
 
@@ -9,23 +14,23 @@ public final class Divider extends WritingMaterials {
         setDraw(true);
     }
 
-    public String getDividerType() {
-        return dividerType;
-    }
-
-       public boolean isMetal() {
-        return metal;
-    }
-
-
-
-    public void setDividerType(String dividerType) {
-        this.dividerType = dividerType;
-    }
-
-    public void setMetal(boolean metal) {
-        this.metal = metal;
-    }
+//    public String getDividerType() {
+//        return dividerType;
+//    }
+//
+//       public boolean isMetal() {
+//        return metal;
+//    }
+//
+//
+//
+//    public void setDividerType(String dividerType) {
+//        this.dividerType = dividerType;
+//    }
+//
+//    public void setMetal(boolean metal) {
+//        this.metal = metal;
+//    }
     public final void draw_circle() {
         System.out.println("Нарисован круг");
     }
