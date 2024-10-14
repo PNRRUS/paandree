@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "e078bdc8-557e-41a0-93cb-12286d60453e",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38906621"
+	},
+	"item": [
+		{
+			"name": "UserCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12789,\r\n  \"username\": \"theUserJohn\",\r\n  \"firstName\": \"John Dayvi Haris\",\r\n  \"lastName\": \"James\",\r\n  \"email\": \"john@email.com\",\r\n  \"password\": \"12345\",\r\n  \"phone\": \"12345\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/user",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserCreate Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12789,\r\n  \"username\": \"theUserJohn\",\r\n  \"firstName\": \"John Dayvi Haris\",\r\n  \"lastName\": \"James\",\r\n  \"email\": \"john@email.com\",\r\n  \"password\": \"12345\",\r\n  \"phone\": \"12345\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/user",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StoreOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12789,\r\n  \"username\": \"theUserJohn\",\r\n  \"firstName\": \"John Dayvi Haris\",\r\n  \"lastName\": \"James\",\r\n  \"email\": \"john@email.com\",\r\n  \"password\": \"12345\",\r\n  \"phone\": \"12345\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/user",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12789,\r\n  \"username\": \"theUserJohn\",\r\n  \"firstName\": \"John Dayvi Haris\",\r\n  \"lastName\": \"James\",\r\n  \"email\": \"john@email.com\",\r\n  \"password\": \"12345\",\r\n  \"phone\": \"12345\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/user",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
