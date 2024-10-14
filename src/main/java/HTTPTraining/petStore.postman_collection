@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "18ccb322-a856-4624-99d4-e01a5cecb8be",
+		"name": "petStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38906621"
+	},
+	"item": [
+		{
+			"name": "findHuvchikID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/pet/12679",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"pet",
+						"12679"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByStatus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/pet/findByStatus?status=sold",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "sold"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "petHuvckicPOST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12678,\r\n  \"name\": \"Huvckik\",\r\n  \"category\": {\r\n    \"id\": 12678,\r\n    \"name\": \"Dogs\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 12678,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/pet",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "petMolicaPOST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12679,\r\n  \"name\": \"Molica\",\r\n  \"category\": {\r\n    \"id\": 12679,\r\n    \"name\": \"Dogs\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 12679,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/pet",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "petMolicaPUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12679,\r\n  \"name\": \"Molica\",\r\n  \"category\": {\r\n    \"id\": 12679,\r\n    \"name\": \"Dogs\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 12679,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"sold\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore3.swagger.io/api/v3/pet",
+					"protocol": "https",
+					"host": [
+						"petstore3",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"api",
+						"v3",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
