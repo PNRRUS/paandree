@@ -13,7 +13,7 @@ public class HTTPTraining {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
 //                .uri(URI.create("http://www.google.com"))
-             .uri(URI.create("https://petstore.swagger.io/v2/pet/12090"))
+             .uri(URI.create("https://petstore3.swagger.io/api/v3/pet/12678"))
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
