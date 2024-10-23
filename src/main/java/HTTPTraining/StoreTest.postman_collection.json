@@ -28,7 +28,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 12678,\r\n  \"petId\": 12678,\r\n  \"quantity\": 1,\r\n  \"shipDate\": \"2024-10-15T21:12:40.131Z\",\r\n  \"status\": \"delivered\",\r\n  \"complete\": true\r\n}",
+					"raw": "{\r\n  \"id\": {{id}},\r\n  \"petId\": {{petId}},\r\n  \"quantity\": 1,\r\n  \"shipDate\": \"{{shipDate}}\",\r\n  \"status\": \"delivered\",\r\n  \"complete\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,18 +36,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://petstore3.swagger.io/api/v3/store/order",
-					"protocol": "https",
+					"raw": "{{URL}}",
 					"host": [
-						"petstore3",
-						"swagger",
-						"io"
-					],
-					"path": [
-						"api",
-						"v3",
-						"store",
-						"order"
+						"{{URL}}"
 					]
 				}
 			},
@@ -63,11 +54,13 @@
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"pm.test(\"PetId True\", function () {\r",
-							"   pm.expect(pm.response.text()).to.include(\"12678\");;\r",
+							"pm.test(\"HuvcikOrderId\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.id).to.eql(Number(pm.collectionVariables.get(\"id\")));\r",
 							"});\r",
-							"pm.test(\"Date True\", function () {\r",
-							"   pm.expect(pm.response.text()).to.include(\"2024-10-15T21:12:40.131+00:00\");;\r",
+							"\r",
+							"pm.test(\"PetId True\", function () {\r",
+							"   pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"shipDate\"));\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -91,19 +84,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://petstore3.swagger.io/api/v3/store/order/12678",
-					"protocol": "https",
+					"raw": "{{URL}}/{{id}}",
 					"host": [
-						"petstore3",
-						"swagger",
-						"io"
+						"{{URL}}"
 					],
 					"path": [
-						"api",
-						"v3",
-						"store",
-						"order",
-						"12678"
+						"{{id}}"
 					]
 				}
 			},
@@ -138,19 +124,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://petstore3.swagger.io/api/v3/store/order/12678",
-					"protocol": "https",
+					"raw": "{{URL}}/{{id}}",
 					"host": [
-						"petstore3",
-						"swagger",
-						"io"
+						"{{URL}}"
 					],
 					"path": [
-						"api",
-						"v3",
-						"store",
-						"order",
-						"12678"
+						"{{id}}"
 					]
 				}
 			},
@@ -166,8 +145,9 @@
 							"pm.test(\"Status code is 404\", function () {\r",
 							"    pm.response.to.have.status(404);\r",
 							"});\r",
-							"pm.test(\"PetId True\", function () {\r",
-							"   pm.expect(pm.response.text()).to.include(\"12678\");;\r",
+							"pm.test(\"HuvcikOrderId\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.id).to.eql(Number(pm.collectionVariables.get(\"id\")));\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -191,19 +171,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://petstore3.swagger.io/api/v3/store/order/12678",
-					"protocol": "https",
+					"raw": "{{URL}}/{{id}}",
 					"host": [
-						"petstore3",
-						"swagger",
-						"io"
+						"{{URL}}"
 					],
 					"path": [
-						"api",
-						"v3",
-						"store",
-						"order",
-						"12678"
+						"{{id}}"
 					]
 				}
 			},
@@ -231,7 +204,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 12678,\r\n  \"petId\": 12678,\r\n  \"quantity\": 1,\r\n  \"shipDate\": \"2024-10-15T21:12:40.131Z\",\r\n  \"status\": \"delivered\",\r\n  \"complete\": true\r\n}",
+					"raw": "{\r\n  \"id\": {{id}},\r\n  \"petId\": {{petId}},\r\n  \"quantity\": 1,\r\n  \"shipDate\": \"{{shipDate}}\",\r\n  \"status\": \"delivered\",\r\n  \"complete\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -239,18 +212,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://petstore3.swagger.io/api/v3/store/order",
-					"protocol": "https",
+					"raw": "{{URL}}",
 					"host": [
-						"petstore3",
-						"swagger",
-						"io"
-					],
-					"path": [
-						"api",
-						"v3",
-						"store",
-						"order"
+						"{{URL}}"
 					]
 				}
 			},
@@ -266,8 +230,9 @@
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"pm.test(\"PetId True\", function () {\r",
-							"   pm.expect(pm.response.text()).to.include(\"12678\");;\r",
+							"pm.test(\"HuvcikOrderId\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.id).to.eql(Number(pm.collectionVariables.get(\"id\")));\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -291,23 +256,59 @@
 					}
 				},
 				"url": {
-					"raw": "https://petstore3.swagger.io/api/v3/store/order/12678",
-					"protocol": "https",
+					"raw": "{{URL}}/{{id}}",
 					"host": [
-						"petstore3",
-						"swagger",
-						"io"
+						"{{URL}}"
 					],
 					"path": [
-						"api",
-						"v3",
-						"store",
-						"order",
-						"12678"
+						"{{id}}"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "12680",
+			"type": "string"
+		},
+		{
+			"key": "URL",
+			"value": "https://petstore3.swagger.io/api/v3/store/order"
+		},
+		{
+			"key": "shipDate",
+			"value": "2024-10-23T21:12:40.131+00:00",
+			"type": "string"
+		},
+		{
+			"key": "petId",
+			"value": "54323",
+			"type": "string"
 		}
 	]
 }
