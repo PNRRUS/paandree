@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "d4003641-0ab1-4289-813b-39eb208d59d3",
+		"name": "WebSiteTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38906621"
+	},
+	"item": [
+		{
+			"name": "Site1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(pm.collectionVariables.get(\"Variable1_1\"), function(){\r",
+							"pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"Variable1_1\"));\r",
+							"});\r",
+							"pm.test(pm.collectionVariables.get(\"Variable1_2\"), function(){\r",
+							"pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"Variable1_2\"));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SiteUrl1}}",
+					"host": [
+						"{{SiteUrl1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Site2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(pm.collectionVariables.get(\"Variable1_1\"), function(){\r",
+							"pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"Variable1_1\"));\r",
+							"});\r",
+							"pm.test(pm.collectionVariables.get(\"Variable1_2\"), function(){\r",
+							"pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"Variable1_2\"));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SiteUrl2}}",
+					"host": [
+						"{{SiteUrl2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Site3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(pm.collectionVariables.get(\"Variable1_1\"), function(){\r",
+							"pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"Variable1_1\"));\r",
+							"});\r",
+							"pm.test(pm.collectionVariables.get(\"Variable1_2\"), function(){\r",
+							"pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"Variable1_2\"));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SiteUrl3}}",
+					"host": [
+						"{{SiteUrl3}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SiteUrl1",
+			"value": "https://www.rambler.ru/"
+		},
+		{
+			"key": "SiteUrl2",
+			"value": "https://lenta.ru/",
+			"type": "string"
+		},
+		{
+			"key": "SiteUrl3",
+			"value": "https://www.rbc.ru/",
+			"type": "string"
+		},
+		{
+			"key": "Variable1_1",
+			"value": "Грузии",
+			"type": "string"
+		},
+		{
+			"key": "Variable1_2",
+			"value": "выборы",
+			"type": "string"
+		}
+	]
+}

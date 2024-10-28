@@ -21,6 +21,22 @@
 						"type": "text/javascript",
 						"packages": {}
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(pm.collectionVariables.get(\"id\"));\r",
+							"let a = \"slovo\";\r",
+							"console.log(\"id = \" + pm.collectionVariables.get(\"id\"));\r",
+							"let b = \"cow\";\r",
+							"console.log(b + a);\r",
+							"let c = 1;\r",
+							"console.log(b + a + c);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
 				}
 			],
 			"request": {
@@ -136,7 +152,7 @@
 			"response": []
 		},
 		{
-			"name": "HuvcikOrderId Copy",
+			"name": "HuvcikOrderIdNotFound",
 			"event": [
 				{
 					"listen": "test",
@@ -193,6 +209,16 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"id\", \"15000\");"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -275,6 +301,10 @@
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
+					"console.log(\"id = \" + pm.collectionVariables.get(\"id\"));\r",
+					"console.log(\"petId = \" + pm.collectionVariables.get(\"petId\"));\r",
+					"\r",
+					"console.log(\"shipDate = \" + pm.collectionVariables.get(\"shipDate\"));\r",
 					""
 				]
 			}
