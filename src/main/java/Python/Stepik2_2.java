@@ -14,15 +14,22 @@ import java.util.Scanner;
 public class Stepik2_2 {
     public static void main (String[] args){
         Scanner text = new Scanner(System.in);
-        String variable1 = text.nextLine();
-        String variable2 = text.nextLine();
-        String variable3 = text.nextLine();
-        System.out.println(variable1);
-        System.out.println(variable2);
-        System.out.println(variable3);
+//        String variable1 = text.nextLine();
+//        String variable2 = text.nextLine();
+//        String variable3 = text.nextLine();
+//        System.out.println(variable1);
+//        System.out.println(variable2);
+//        System.out.println(variable3);
+//
+//        String footballBand = text.nextLine();
+//        System.out.print(footballBand + " - чемпион!");
 
-        String footballBand = text.nextLine();
-        System.out.print(footballBand + " - чемпион!");
+
+       int variable9 = text.nextInt();
+        String variable10 = Integer.toString(variable9);
+        System.out.println(variable10 + " Андреев Павел Юрьевич");
+        int variable11 = Integer.valueOf(variable10);
+        System.out.print(variable11 + 7);
         text.close();
     }
 }
