@@ -13,6 +13,7 @@ class NumberOfLettersInWordTest {
         assertEquals("Три буквы", NumberInWord("суп"), "Test 3 failed");
         assertEquals("Две буквы", NumberInWord("он"), "Test 2 failed");
         assertEquals("Одна буква", NumberInWord("я"), "Test 1 failed");
+        assertEquals("Шесть букв", NumberInWord("огород"), "Test 7 failed");
         assertEquals("Четыре буквы", NumberInWord("карп"), "Test 4 failed");
     }
 }

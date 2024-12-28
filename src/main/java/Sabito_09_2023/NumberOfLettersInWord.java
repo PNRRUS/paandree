@@ -20,6 +20,8 @@ public class NumberOfLettersInWord {
                 return("Четыре буквы");
             case 5:
                 return("Пять букв");
+            case 6:
+                return("Шесть букв");
             default:
                 return("Длинное слово");
         }
