@@ -1,7 +1,7 @@
 package Python;
 
 public class Mixer_1 {
-    public static void main(String[] Args){
+    public static void main(String[] args) {
 
     }
     public static String mixer_color (String a,String b){
