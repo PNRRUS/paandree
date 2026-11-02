@@ -40,9 +40,9 @@ int[] arr = new int[width];
         System.out.print(arrChar[counter] + " ");
         System.out.print(arrCharLowerCase[counter] + " ");
         counter++;}
-    System.out.print("\b" + "]" + "\n" );
-    char Japan = 'а';
-    System.out.println((int)Japan);
+//    System.out.print("\b" + "]" + "\n" );
+//    char Japan = 'а';
+//    System.out.println((int)Japan);
     System.out.println(arrCharLowerCase[9]);
                }
 }
